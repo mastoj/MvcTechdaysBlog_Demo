@@ -1,11 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Data.Entity;
-using System.Linq;
-using System.Web;
+﻿using System.Data.Entity;
 using System.Web.Mvc;
 using System.Web.Routing;
-using MvcTechdaysBlog.Filters;
 using MvcTechdaysBlog.Models;
 
 namespace MvcTechdaysBlog
@@ -17,27 +12,16 @@ namespace MvcTechdaysBlog
     {
         public static void RegisterGlobalFilters(GlobalFilterCollection filters)
         {
-            filters.Add(new RequireAutheticationAttribute());
         }
 
         public static void RegisterRoutes(RouteCollection routes)
         {
             routes.IgnoreRoute("{resource}.axd/{*pathInfo}");
 
-            routes.IgnoreRoute("favicon.ico");
-
-            routes.MapRoute(
-                "Article",
-                "{id}",
-                new { controller = "Home", action = "Article" },
-                new string[] { "MvcTechdaysBlog.Controllers" }
-                );
-
             routes.MapRoute(
                 "Default", // Route name
                 "{controller}/{action}/{id}", // URL with parameters
-                new { controller = "Home", action = "Index", id = UrlParameter.Optional }, // Parameter defaults
-                new string[] { "MvcTechdaysBlog.Controllers" }
+                new { controller = "Home", action = "Index", id = UrlParameter.Optional } // Parameter defaults
                 );
         }
 

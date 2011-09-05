@@ -1,8 +1,7 @@
 ﻿using System.Web.Mvc;
 using System.Web.Security;
-using MvcTechdaysBlog.Areas.Admin.Models;
-using MvcTechdaysBlog.Filters;
 using MvcTechdaysBlog.Helpers;
+using MvcTechdaysBlog.Models;
 
 namespace MvcTechdaysBlog.Controllers
 {
@@ -11,7 +10,6 @@ namespace MvcTechdaysBlog.Controllers
         //
         // GET: /Admin/Account/
 
-        [AllowAnonymous]
         public virtual ActionResult LogOn()
         {
             if (User.Identity.IsAuthenticated)
@@ -22,7 +20,6 @@ namespace MvcTechdaysBlog.Controllers
         }
 
         [HttpPost]
-        [AllowAnonymous]
         public virtual ActionResult LogOn(LogOnViewModel model)
         {
             if (ModelState.IsValid && CheckCredentials(model))
