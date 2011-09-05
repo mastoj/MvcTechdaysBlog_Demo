@@ -25,6 +25,7 @@
                     <a href="/">Home</a>
                     @if (User.Identity.IsAuthenticated)
                     {
+                        @Html.ActionLink("Admin", "Index", "Article", new { Area = "Admin" }, null)
                         @Html.ActionLink("Log off", "LogOff", "Account")
                     }
                 </div>
