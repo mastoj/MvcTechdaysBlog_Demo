@@ -2,10 +2,12 @@
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using MvcTechdaysBlog.Filters;
 using MvcTechdaysBlog.Models;
 
 namespace MvcTechdaysBlog.Controllers
 {
+    [AllowAnonymous]
     public partial class HomeController : Controller
     {
         private DataService db = new DataService();

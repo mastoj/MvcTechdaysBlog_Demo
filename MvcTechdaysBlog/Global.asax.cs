@@ -1,6 +1,7 @@
 ﻿using System.Data.Entity;
 using System.Web.Mvc;
 using System.Web.Routing;
+using MvcTechdaysBlog.Filters;
 using MvcTechdaysBlog.Models;
 
 namespace MvcTechdaysBlog
@@ -12,6 +13,7 @@ namespace MvcTechdaysBlog
     {
         public static void RegisterGlobalFilters(GlobalFilterCollection filters)
         {
+            filters.Add(new RequireAutheticationAttribute());
         }
 
         public static void RegisterRoutes(RouteCollection routes)

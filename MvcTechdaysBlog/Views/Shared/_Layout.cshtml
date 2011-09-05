@@ -26,7 +26,7 @@
                     @if (User.Identity.IsAuthenticated)
                     {
                         @Html.ActionLink("Admin", "Index", "Article", new { Area = "Admin" }, null)
-                        @Html.ActionLink("Log off", "LogOff", "Account")
+                        @Html.ActionLink("Log off", "LogOff", "Account", new { Area = ""}, null)
                     }
                 </div>
             </div>

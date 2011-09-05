@@ -1,10 +1,12 @@
 ﻿using System.Web.Mvc;
 using System.Web.Security;
+using MvcTechdaysBlog.Filters;
 using MvcTechdaysBlog.Helpers;
 using MvcTechdaysBlog.Models;
 
 namespace MvcTechdaysBlog.Controllers
 {
+    [AllowAnonymous]
     public partial class AccountController : Controller
     {
         //

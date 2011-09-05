@@ -1,8 +1,10 @@
 ﻿using System;
 using System.Web.Mvc;
+using MvcTechdaysBlog.Filters;
 
 namespace MvcTechdaysBlog.Controllers
 {
+    [AllowAnonymous]
     public partial class ErrorController : Controller
     {
         public virtual ActionResult Error1()
