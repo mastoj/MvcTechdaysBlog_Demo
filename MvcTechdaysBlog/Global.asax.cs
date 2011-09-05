@@ -18,6 +18,14 @@ namespace MvcTechdaysBlog
         {
             routes.IgnoreRoute("{resource}.axd/{*pathInfo}");
 
+            routes.IgnoreRoute("favicon.ico");
+
+            routes.MapRoute(
+                "Article",
+                "{id}",
+                new { controller = "Home", action = "Article" }
+                );
+
             routes.MapRoute(
                 "Default", // Route name
                 "{controller}/{action}/{id}", // URL with parameters
@@ -28,7 +36,7 @@ namespace MvcTechdaysBlog
         protected void Application_Start()
         {
             AreaRegistration.RegisterAllAreas();
-            //Database.SetInitializer(new DropCreateDatabaseIfModelChanges<DataService>());
+            Database.SetInitializer(new DropCreateDatabaseIfModelChanges<DataService>());
             RegisterGlobalFilters(GlobalFilters.Filters);
             RegisterRoutes(RouteTable.Routes);
         }

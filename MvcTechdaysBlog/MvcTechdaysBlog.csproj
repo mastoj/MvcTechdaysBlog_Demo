@@ -118,6 +118,7 @@
     <Compile Include="Areas\Admin\AreaAreaRegistration.cs" />
     <Compile Include="Areas\Admin\Controllers\ArticleController.cs" />
     <Compile Include="Controllers\AccountController.cs" />
+    <Compile Include="Models\Comment.cs" />
     <Compile Include="Models\DataService.cs" />
     <Compile Include="Models\Article.cs" />
     <Compile Include="Models\LogOnViewModel.cs" />
@@ -294,6 +295,10 @@
     </None>
     <Content Include="Views\Shared\EditorTemplates\String.cshtml" />
     <Content Include="Views\Shared\EditorTemplates\MultilineText.cshtml" />
+    <Content Include="Views\Home\Index.cshtml" />
+    <Content Include="Views\Home\Article.cshtml" />
+    <Content Include="Views\Shared\Comment.cshtml" />
+    <Content Include="Views\Shared\CommentForm.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />

@@ -27,6 +27,8 @@ namespace MvcTechdaysBlog.Models
         [DataType(DataType.Date)]
         public DateTime Date { get; set; }
 
+        public virtual ICollection<Comment> Comments { get; set; }
+
         public IEnumerable<ValidationResult> Validate(ValidationContext validationContext)
         {
             if (Date.Date < DateTime.Now.AddDays(-7).Date)

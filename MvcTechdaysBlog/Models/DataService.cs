@@ -14,5 +14,6 @@ namespace MvcTechdaysBlog.Models
         // System.Data.Entity.Database.SetInitializer(new System.Data.Entity.DropCreateDatabaseIfModelChanges<MvcTechdaysBlog.DataService>());
 
         public DbSet<Article> Articles { get; set; }
+        public DbSet<Comment> Comments { get; set; }
     }
 }

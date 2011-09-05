@@ -1,0 +1,16 @@
+﻿@model List<MvcTechdaysBlog.Models.Article>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<div class="one">
+    @foreach (var article in Model)
+    {
+        <div class="article">
+            <a href="@Url.Action("Article", new { id = article.Url })"><h2>@article.Title</h2></a>
+            <p>@article.Description</p>
+            <a href="@Url.Action("Article", new { id = article.Url })" class="fancy-button" style="margin-top: 10px;">Les mer</a>
+        </div>
+    }
+</div>
